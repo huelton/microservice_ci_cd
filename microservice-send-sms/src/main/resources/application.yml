@@ -1,0 +1,20 @@
+spring:
+  application:
+       name: microservice-send-sms
+  boot:
+     admin:
+        client:
+           url: http://localhost:8090
+           instance:
+               prefer-ip: true
+
+server:
+  port: 8082
+  tomcat:
+     max-threads: 50
+
+management:
+    endpoints:
+       web:
+         exposure:
+              include: '*'

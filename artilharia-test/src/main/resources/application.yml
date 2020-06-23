@@ -1,0 +1,23 @@
+server:
+   port: 8083
+
+spring:
+   application:
+      name: artilharia-test
+   boot:
+     admin:
+        client:
+            url: http://localhost:8090  
+            instance:
+                prefer-ip: true   
+     
+send:
+   url: http://127.0.0.1:8084/receive
+
+management:
+     endpoints:
+           web:
+             exposure:
+                 include: '*'
+
+

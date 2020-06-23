@@ -1,0 +1,38 @@
+server:
+  port: 8084
+  tomcat:
+     max-threads: 50
+
+management:
+    endpoints:
+        web:
+          exposure:
+              include: '*'
+
+spring:
+   application:
+      name: microservice-send
+   boot:
+      admin:
+         client:
+            url: http://localhost:8090
+            instance:
+                prefer-ip: true
+
+feign:
+   hystrix:
+      enabled: true
+
+                
+sms:
+  server:
+     url: http://localhost:8082
+
+email:
+   server:
+      url: http://localhost:8081
+
+
+
+
+

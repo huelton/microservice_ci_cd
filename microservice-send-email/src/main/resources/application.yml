@@ -1,0 +1,22 @@
+server:
+   port: 8081
+   tomcat:
+       max-threads: 50
+
+spring:
+  application:
+      name: microservice-send-email
+  boot:
+    admin:
+       client:
+          url: http://127.0.0.1:8090
+          instance:
+              prefer-ip: true
+              
+management:
+    endpoints:
+       web:
+         exposure:
+             include: '*'
+
+
